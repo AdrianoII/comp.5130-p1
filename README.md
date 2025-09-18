@@ -1,6 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the repository of my new personal website.
+
+# Student Information
+* Name: Adriano Marcelo Vilarga Corbelino II
+
+## Milestone 0
+I departed from my initial plan of using Dioxus and switched to a more traditional approach using TypeScript and NextJS.
+Initially, I attempted to use Dioxus, but it lacks adequate support for static site generation.
+This difficulty was enough for me to change the stack.
+I continue with the same plan for the features and planned pages.
+
+## Milestone 1
+This initial version has four pages.
+ * About: containing a picture of me and a short bio ([/](app/page.tsx));
+ * CV: With a version of my CV ([/cv](app/cv/page.tsx));
+ * Projects: With short descriptions of my projects ([/projects](app/projects/page.tsx));
+ * CoPy: With a detailed description of this project, and a code editor to test the new features ([/projects/copy](app/projects/copy/page.tsx)).
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 First, run the development server:
 
