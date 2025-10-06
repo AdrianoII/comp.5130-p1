@@ -19,7 +19,8 @@
     "@mui/material-nextjs": "^7.3.2",
     "next": "15.5.3",
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-py": "^1.11.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
