@@ -2,50 +2,51 @@
 import Image from "next/image";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import '@hellouxpavel/cssanimation/css';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <section id="sec-bio" className="prose lg:prose-2xl" >
-          <figure className="h-2/4 flex justify-center">
-            <Image
-              src="/mt_major_2025.jpg"
-              alt="Picture of Adriano at the Mount Major taken in 2025."
-              width={0}
-              height={0}
-              // fill
-              // sizes="(max-width: 2000px) 33vw,(max-width: 768px) 33vw, (max-width: 1200px) 33vw, 33vw"
-              priority
-              sizes="100vw"
-              className="min-w-2/5 max-w-2/5 h-auto"
-            />
-          </figure>
-          <h1 className="text-center text-primary">Hello there! 👋</h1>
-          <p className="text-primary-content">
-            I am Adriano, ... At the moment, this is just a placeholder text for my bio.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at nisl non magna maximus volutpat. Phasellus elementum lorem eget tellus commodo pellentesque. Vivamus elementum efficitur nulla, ut consectetur nunc imperdiet quis. Ut arcu purus, euismod sit amet justo a, tempor fringilla ante. In facilisis odio quis ante elementum vulputate. Vestibulum molestie diam id sem dapibus bibendum. Vestibulum quis venenatis enim. Mauris semper lectus vitae mi posuere porta. Donec varius faucibus velit sit amet ultricies. Mauris in ornare ex. Fusce facilisis consectetur erat, sed vulputate eros pellentesque at.
-          </p>
-        </section>
-      </main>
-      <footer id="sec-social" className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-accent">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="mailto:adrianocorbelinoii@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EmailIcon fontSize="large" />
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://www.github.com/adrianoii"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GitHubIcon fontSize="large" />
-        </a>
+    <>
+      <section id="sec-bio" className="prose lg:prose-xl">
+        <figure className="justify-center h-[35vh] md:h-[50vh] relative">
+          <Image
+            src="/mt_major_2025.jpg"
+            alt="Picture of Adriano at the Mount Major taken in 2025."
+            fill
+            priority
+            className="object-contain mask mask-squircle cssanimation ca__fx-scribbleGlowIn"
+          />
+        </figure>
+        <h1 className="text-center text-primary text-3xl">Hello there! 👋</h1>
+        <p className="text-info text-justify">
+          I am Adriano, a second-year PhD student at the University of Massachusetts Lowell, advised by <a href="https://pauldownen.com/">Dr. Paul Downen</a>.
+        </p>
+        <p className="text-info text-justify">
+          My current research fascination is to explore how we can merge programming paradigms. My current research bridges the gap between the functional and object-oriented worlds with codata. If this sounds interesting to you, check my current project <Link href="/projects/copy">CoPy</Link>, where I took the converse approach and added copatterns to Python.
+        </p>
+      </section>
+      <footer id="sec-social" className="flex flex-col text-success">
+        <h1 className="text-center text-secondary text-2xl md:text-5xl">Find me on:</h1>
+        <div className="flex flex-row flex-wrap items-center justify-center gap-4 text-5xl md:text-6xl  ">
+          <a
+            className="hover:text-primary"
+            href="mailto:adrianocorbelinoii@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EmailIcon fontSize="inherit" />
+          </a>
+          <a
+            className="hover:text-primary"
+            href="https://www.github.com/adrianoii"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon fontSize="inherit" />
+          </a>
+        </div>
       </footer>
-    </div>
+    </>
   );
 }
