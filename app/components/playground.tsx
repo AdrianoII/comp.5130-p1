@@ -6,11 +6,9 @@ import { useState, useEffect } from 'react';
 import { usePython } from 'react-py'
 
 export default function Playground() {
-    let [loading, setLoading] = useState(true)
     const [input, setInput] = useState('print("Write Python code Here!")')
 
     const { runPython, stdout, stderr, isLoading, isRunning } = usePython()
-    // await pyodide.loadPackage("pyodide-http")
 
     useEffect(() => {
         navigator.serviceWorker
@@ -35,7 +33,7 @@ export default function Playground() {
                             theme="vs-dark"
                             defaultLanguage="python"
                             defaultValue={input}
-                            onChange={(v, e) => setInput(v)}
+                            onChange={(v, e) => setInput(v === undefined ? "" : v)}
                             
                         />
                     }
