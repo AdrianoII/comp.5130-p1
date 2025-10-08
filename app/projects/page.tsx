@@ -12,7 +12,7 @@ export default function Projects() {
                         <figure>
                             <img
                                 src="/python-logo.svg"
-                                className="invert"
+                                className="invert max-sm:max-h-1/3"
                                 alt="Logo of CoPy." />
                         </figure>
                     </Link>
@@ -33,7 +33,7 @@ export default function Projects() {
                         <figure>
                             <img
                                 src="/ouroboros.svg"
-                                className="invert"
+                                className="invert h-auto w-auto max-sm:max-h-40"
                                 alt="Logo of Ourobouros." />
                         </figure>
                     </Link>
