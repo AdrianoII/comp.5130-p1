@@ -25,26 +25,27 @@ export default function Playground() {
     }, [])
     return (
         <section className="mt-4 pt-2 w-full">
-            <h1 className="text-5xl font-bold">Playground</h1>
+            <h1 className="text-5xl font-bold text-accent">Playground</h1>
             <div className="flex flex-col md:flex-row gap-4">
-                <div className="w-full md:w-1/2 p-4">
+                <div className="w-full md:w-9/12">
                     {isLoading ? <div className="skeleton h-[50vh]"></div> :
                         <Editor
                             height="50vh"
-                            className='mt-4 mb-8'
+                            className='mt-4 mb-8 border-4 rounded border-solid border-(--color-info-content)'
                             theme="vs-dark"
                             defaultLanguage="python"
                             defaultValue={input}
                             onChange={(v, e) => setInput(v)}
+                            
                         />
                     }
                 </div>
-                <div className="w-full md:w-1/2 mt-4  p-4 ">
+                <div className="w-full md:w-1/2 mt-4 md:mt-0 p-4 flex flex-col gap-4">
                     <button disabled={isLoading || isRunning} className="btn btn-primary" onClick={() => { runPython(input) }}> <PlayArrow />Run</button>
                     <div className="mockup-code w-full">
                         {isLoading && <pre data-prefix="$"><code>Loading intrepreter <span className="loading loading-dots loading-xs"></span></code></pre>}
                         {!isLoading && stderr.length > 0 && <pre data-prefix=">" className="bg-warning text-warning-content"><code>{stderr}</code></pre>}
-                        {!isLoading && stderr.length == 0 && <pre data-prefix=">"><code>{stdout}</code></pre>}
+                        {!isLoading && stderr.length == 0 && <pre data-prefix=""><code>{stdout}</code></pre>}
                     </div>
                 </div>
             </div>
