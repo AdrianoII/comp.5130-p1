@@ -28,14 +28,12 @@ export default function Projects() {
             </article>
             <article className="prose lg:prose-lg mt-4 w-full">
                 <div className="card md:card-side bg-secondary-content md:pl-6 items-center">
-                    <Link href="projects/copy" className="basis-1/5 md:basis-1/3 text-center">
-                        <figure>
-                            <img
-                                src="/ouroboros.svg"
-                                className="invert h-auto w-auto max-sm:max-h-40"
-                                alt="Logo of Ourobouros." />
-                        </figure>
-                    </Link>
+                    <figure className="basis-1/5 md:basis-1/3 text-center">
+                        <img
+                            src="/ouroboros.svg"
+                            className="invert h-auto w-auto max-sm:max-h-40"
+                            alt="Logo of Ourobouros." />
+                    </figure>
                     <div className="card-body basis-4/5 md:basis-2/3">
                         <h2 className="card-title text-primary">Ourobouros: Project Website Template + Wasm!</h2>
                         <p className="md:text-2xl">This very own website.</p>
@@ -44,14 +42,11 @@ export default function Projects() {
             </article>
             <article className="prose lg:prose-lg mt-4 w-full">
                 <div className="card md:card-side bg-secondary-content md:pl-6 items-center">
-                    <Link href="projects/copy" className="basis-1/5 md:basis-1/3 text-center">
-                        <figure>
-                            <img
-                                src="/wip.gif"
-                                // className="invert"
-                                alt="Construction road sign." />
-                        </figure>
-                    </Link>
+                    <figure className="basis-1/5 md:basis-1/3 text-center">
+                        <img
+                            src="/wip.gif"
+                            alt="Construction road sign." />
+                    </figure>
                     <div className="card-body basis-4/5 md:basis-2/3">
                         <h2 className="card-title text-primary">🚧New project🚧</h2>
                         <p className="md:text-2xl">Somewhere down the road...</p>
