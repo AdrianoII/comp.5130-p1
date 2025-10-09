@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <>
       <section id="sec-bio" className="prose lg:prose-xl">
+        <h1 className="text-center text-secondary text-xl">Who am I?</h1>
         <figure className="justify-center h-[35vh] md:h-[50vh] relative">
           <Image
             src="/mt_major_2025.jpg"
@@ -18,7 +19,7 @@ export default function Home() {
             className="object-contain mask mask-squircle cssanimation ca__fx-scribbleGlowIn"
           />
         </figure>
-        <h1 className="text-center text-primary text-3xl">Hello there! 👋</h1>
+        <h2 className="text-center text-primary text-3xl">Hello there! 👋</h2>
         <p className="text-info text-justify">
           I am Adriano, a second-year PhD student at the University of Massachusetts Lowell, advised by <a href="https://pauldownen.com/">Dr. Paul Downen</a>.
         </p>
@@ -34,6 +35,7 @@ export default function Home() {
             href="mailto:adrianocorbelinoii@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Adriano's Email Address"
           >
             <EmailIcon fontSize="inherit" />
           </a>
@@ -42,6 +44,7 @@ export default function Home() {
             href="https://www.github.com/adrianoii"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Adriano's Github Profile"
           >
             <GitHubIcon fontSize="inherit" />
           </a>
