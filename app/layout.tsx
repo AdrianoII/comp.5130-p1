@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Comic_Relief } from "next/font/google";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import "./globals.css";
 import NavBar from "./components/navbar";
@@ -23,9 +22,10 @@ export default function RootLayout({
       <body
         className={``}
       >
+        <a href="#mainctt" className="hidden absolute ">Skip to main content.</a>
         <AppRouterCacheProvider>
           <NavBar />
-          <main className="flex flex-col items-center bg-base-100 rounded-xl justify-items-center mx-8 mb-8 p-8 min-h-[85vh]" role="main">
+          <main id="mainctt" className="flex flex-col items-center bg-base-100 rounded-xl justify-items-center mx-8 mb-8 p-8 min-h-[85vh]" role="main">
             {children}
           </main>
         </AppRouterCacheProvider>
