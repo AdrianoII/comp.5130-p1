@@ -1,6 +1,6 @@
 "use client"
 
-import Editor, { DiffEditor, useMonaco, loader } from '@monaco-editor/react';
+import Editor from '@monaco-editor/react';
 import PlayArrow from '@mui/icons-material/PlayArrow';
 import { useState, useEffect } from 'react';
 import { usePython } from 'react-py'
@@ -33,7 +33,7 @@ export default function Playground() {
                             theme="vs-dark"
                             defaultLanguage="python"
                             defaultValue={input}
-                            onChange={(v, e) => setInput(v === undefined ? "" : v)}
+                            onChange={(v, _) => setInput(v === undefined ? "" : v)}
                             
                         />
                     }
@@ -42,8 +42,8 @@ export default function Playground() {
                     <button disabled={isLoading || isRunning} className="btn btn-primary" onClick={() => { runPython(input) }}> <PlayArrow />Run</button>
                     <div className="mockup-code w-full">
                         {isLoading && <pre data-prefix="$"><code>Loading intrepreter <span className="loading loading-dots loading-xs"></span></code></pre>}
-                        {!isLoading && stderr.length > 0 && <pre data-prefix=">" className="bg-warning text-warning-content"><code>{stderr}</code></pre>}
-                        {!isLoading && stderr.length == 0 && <pre data-prefix=""><code>{stdout}</code></pre>}
+                        {!isLoading && stderr.length > 0 && <pre data-prefix=">" className="bg-error text-error-content mx-4"><code>{stderr}</code></pre>}
+                        {!isLoading && stderr.length == 0 && <pre data-prefix="" className="mx-4"><code>{stdout}</code></pre>}
                     </div>
                 </div>
             </div>
